@@ -1,0 +1,11 @@
+Package: crickdata
+Type: Package
+Title: Data downloaded from ESPN cricinfo data base
+Version: 0.1.0
+Author: Duncan Golicher
+Maintainer: dgolicher@gmail.com
+Description: The current package contains all the data downloaded and reformatted from ESPN cric info after the England vs South Africa test series ended in August 2017.It contains all innings by batsmen, all the bowling figures and all completed innings in Test matches, one day internationals and international 2020 matches. Test statistics date from 1897.As the original download took several hours and resulted in badly formatted data, this is provided as a resource for anyone wanting to avoid tedious downloading and reforatting.
+
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
