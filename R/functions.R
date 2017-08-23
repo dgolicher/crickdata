@@ -4,14 +4,14 @@ latest_bowling<-function(yr=2017,npages=1)
   require(lubridate)
   require(dplyr)
   i=1
-  url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=bowling;view=innings",sep="")
+  url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=bowling;view=innings",sep="")
   tables <-readHTMLTable(url, stringsAsFactors = F)
   t <- tables$"Innings by innings list"
 
   for (i in 2:npages+1)
   {
 
-    url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=bowling;view=innings",sep="")
+    url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=bowling;view=innings",sep="")
 
     try(tables <-readHTMLTable(url, stringsAsFactors = F))
     try(tt <- tables$"Innings by innings list")
@@ -45,11 +45,11 @@ latest_batting<-function(yr=2017,npages=1)
   require(lubridate)
   require(dplyr)
   i=1
-  url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=batting;view=innings",sep="")
+  url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=batting;view=innings",sep="")
   tables <-readHTMLTable(url, stringsAsFactors = F)
   t <- tables$"Innings by innings list"
   for (i in 2:npages+1)
-  {url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=batting;view=innings",sep="")
+  {url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=batting;view=innings",sep="")
 
     try(tables <-readHTMLTable(url, stringsAsFactors = F))
     try(tt <- tables$"Innings by innings list")
@@ -86,13 +86,13 @@ yr=2017
     require(lubridate)
     require(dplyr)
     i=1
-    url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=team;view=innings",sep="")
+    url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=team;view=innings",sep="")
     tables <-readHTMLTable(url, stringsAsFactors = F)
     t <- tables$"Innings by innings list"
 
     for (i in 2:npages+1)
     {
-     url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=5+Aug+2017;spanval2=span;template=results;type=team;view=innings",sep="")
+     url<-paste("http://stats.espncricinfo.com/ci/engine/stats/index.html?class=11;page=",i,";spanmax2=31+Dec+",yr,";spanmin2=20+Aug+2017;spanval2=span;template=results;type=team;view=innings",sep="")
 
     try(tables <-readHTMLTable(url, stringsAsFactors = F))
     try(tt <- tables$"Innings by innings list")
